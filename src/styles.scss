@@ -22,9 +22,6 @@ nav {
   @include white-text-black-bg;
   display: flex;
   justify-content: flex-start;
-  height: 80px;
-  margin-top: -80px;
-  
 
   a {
     @include white-text-black-bg;
