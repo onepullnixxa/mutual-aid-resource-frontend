@@ -4,7 +4,7 @@ import Index from "../pages/Index";
 import Show from "../pages/Show";
 
 function Main(props) {
-  const [ person, setPerson ] = useState(null);
+  const [person, setPerson] = useState(null);
 
   const URL = "https://mutual-aid-resource.herokuapp.com/home";
 
@@ -37,11 +37,7 @@ function Main(props) {
         </Route>
         <Route
           path="/home/:id"
-          render={(rp) => (
-            <Show
-              {...rp}
-            />
-          )}
+          render={(rp) => <Show person={person} {...rp} />}
         />
       </Switch>
     </main>
