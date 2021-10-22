@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import Index from "../pages/Index";
 import Show from "../pages/Show";
+import Add from "../pages/Add";
 
 function Main(props) {
   const [person, setPerson] = useState(null);
@@ -39,6 +40,9 @@ function Main(props) {
           path="/home/:id"
           render={(rp) => <Show person={person} {...rp} />}
         />
+        <Route path="/add">
+          <Add />
+        </Route>
       </Switch>
     </main>
   );
