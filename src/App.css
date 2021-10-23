@@ -1,5 +1,9 @@
 * {
     background-color: transparent;
+    list-style: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 @font-face {
@@ -7,26 +11,35 @@
     src: url(./fonts/univers-next-pro-light.woff);
 }
 
-nav {
+.nav li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav {
     display: flex;
     font-family: 'Univers-next';
+    font-size: 14px;
     text-decoration: none;
     background: inherit;
-    height: 80px;
-    justify-content: space-between;
-    padding: 0.5rem (calc(100vw - 1000px) / 2);
-    z-index: 10;
+    justify-content: flex-end;
+    margin-top: 10px;
+    margin-right: 5vw;
+
 }
+
 
 
 
 .mutual-aid-btn {
-    color: #868686
+    color: #868686;
+    margin-right: 20px;
+
 }
 
 .mutual-aid-btn:hover {
     color: #474747;
-    transition: .4s;
+    transition: .4s ease;
 }
 
 #about {
@@ -35,7 +48,7 @@ nav {
 
 #about:hover {
     color: #818181;
-    transition: .4s;
+    transition: .4s ease;
 }
 
 #add {
@@ -44,5 +57,47 @@ nav {
 
 #add:hover {
     color: #818181;
-    transition: .4s;
+    transition: .4s ease;
+}
+
+/* /////INDEX////// */
+.person-icon {
+    border-radius: 300px;
+    width: 550px;
+}
+
+
+
+/* /////SHOW////// */
+.person-show {
+    display: flex;
+    margin-top: 15vh;
+}
+
+.person-show > * {
+    flex-basis: 100%;
+}
+
+.show-left {
+    margin-left: 15vw;
+}
+
+.show-right {
+    margin-right: 10vw;
+    font-family: "Univers-next";
+}
+
+.show-icon {
+    border-radius: 250px;
+    width: 475px;
+    object-fit: contain;
+}
+
+.show-name {
+    margin-top: 25px;
+    padding-bottom: 30px;
+}
+
+.show-link {
+    padding-bottom: 30px;
 }

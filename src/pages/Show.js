@@ -5,14 +5,14 @@ function Show(props) {
 
   return (
     <div className="person-show">
-      <img 
-      src={individual.img} 
-      alt={individual.name} 
-      className="show-icon" 
-      />
-      <h1>{individual.name}</h1>
-      <h2>{individual.donateLink}</h2>
-      <p>{individual.contentText}</p>
+      <div className="show-left">
+        <img src={individual.img} alt={individual.name} className="show-icon" />
+      </div>
+      <div className="show-right">
+        <h1 className="show-name">{individual.name}</h1>
+        <h2 className="show-link">{individual.donateLink}</h2>
+        <p className="show-text">{individual.contentText}</p>
+      </div>
     </div>
   );
 }
