@@ -41,7 +41,7 @@ function Main(props) {
           render={(rp) => <Show person={person} {...rp} />}
         />
         <Route path="/add">
-          <Add />
+          <Add person={person} createPersons={createPersons} />
         </Route>
       </Switch>
     </main>

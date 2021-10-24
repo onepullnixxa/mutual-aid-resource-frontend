@@ -12,6 +12,8 @@ function Add(props) {
   // handleChange function for form
   const handleChange = (event) => {
     setNewForm({ ...newForm, [event.target.name]: event.target.value });
+    console.log(event.target)
+    console.log(setNewForm)
   };
 
   // handleSubmit function for form
@@ -39,21 +41,21 @@ function Add(props) {
         <input
           type="text"
           value={newForm.img}
-          name="image"
+          name="img"
           placeholder="Image URL"
           onChange={handleChange}
         />
         <input
           type="text"
           value={newForm.donateLink}
-          name="donate-link"
+          name="donateLink"
           placeholder="Link to Donate"
           onChange={handleChange}
         />
         <textarea
           type="text"
           value={newForm.contentText}
-          name="content-text"
+          name="contentText"
           placeholder="Please enter text here..."
           onChange={handleChange}
         />

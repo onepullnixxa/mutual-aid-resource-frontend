@@ -21,6 +21,7 @@ function Index(props) {
 
   const loading = () => {
     return <h1>Just a moment...</h1>;
+    
   };
 
   return props.person ? loaded() : loading();
