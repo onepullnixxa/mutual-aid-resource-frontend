@@ -11,6 +11,8 @@
     src: url(./fonts/univers-next-pro-light.woff);
 }
 
+/* /////HEADER////// */
+
 .nav li {
     display: inline-block;
     padding: 0 20px;
@@ -24,12 +26,9 @@
     background: inherit;
     justify-content: flex-end;
     margin-top: 10px;
-    margin-right: 5vw;
+    margin-right: 3vw;
 
 }
-
-
-
 
 .mutual-aid-btn {
     color: #868686;
@@ -62,8 +61,45 @@
 
 /* /////INDEX////// */
 .person-icon {
-    border-radius: 300px;
-    width: 550px;
+    border-radius: 315px;
+    width: 575px;
+}
+
+.individual {
+    text-align: center;
+    margin-top: 85vh;
+    height: 100vh;   
+}
+
+.individual-text {
+    margin-top: 25px;
+}
+
+#individual-name {
+    font-family: "Univers-next";
+    font-size: 36px;
+
+}
+
+#individual-link {
+    font-family: "Univers-next";
+    color: #868686;
+    font-size: 24px;
+    padding: 10px;
+}
+
+#individual-link:hover {
+    color: #474747;
+    transition: .4s ease;
+}
+
+#individual-text {
+    font-family: "Univers-next";
+    font-size: 18px;
+    padding: 0px 400px;
+    margin: 5px;
+    word-spacing: -0.025em;
+    letter-spacing: 0.005em;
 }
 
 
@@ -71,7 +107,7 @@
 /* /////SHOW////// */
 .person-show {
     display: flex;
-    margin-top: 15vh;
+    margin-top: 25vh;
 }
 
 .person-show > * {
