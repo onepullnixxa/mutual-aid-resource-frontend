@@ -164,14 +164,13 @@
     color: #000;
     box-sizing: border-box;
     border-radius: 2px;
-    position: absolute;
 }
 
 .formTitle {
     display: flex;
     font-family: "Univers-next";
     text-align: left;
-    margin-bottom: 28vh;
+    margin-bottom: 30vh;
     margin-right: 25px;
 }
 
@@ -194,7 +193,8 @@
 }
 
 .submitButton {
-    margin-left: 9.5vw;
+    margin-left: 10vw;
+    font-size: 12px;
 }
 
 textarea {

@@ -33,7 +33,7 @@ function Add(props) {
 
     <section className="addForm">
       <div className="formTitle">
-        <h4>Please enter information below</h4>
+        <h4>Please enter information</h4>
       </div>
       <form onSubmit={handleSubmit}>
         <input
@@ -43,6 +43,7 @@ function Add(props) {
           className="individualName"
           placeholder="Individual's Name"
           onChange={handleChange}
+          required
         />
         <input
           type="text"
@@ -51,6 +52,7 @@ function Add(props) {
           className="individualImg"
           placeholder="Image URL"
           onChange={handleChange}
+          required
         />
         <input
           type="text"
@@ -59,6 +61,7 @@ function Add(props) {
           className="donationLink"
           placeholder="Link to Donate"
           onChange={handleChange}
+          required
         />
         <textarea
           type="text"
@@ -67,6 +70,7 @@ function Add(props) {
           className="paragraphTextBox"
           placeholder="Enter short description here..."
           onChange={handleChange}
+          required
         />
         <input className="submitButton" type="submit" value="Submit Post" />
       </form>
