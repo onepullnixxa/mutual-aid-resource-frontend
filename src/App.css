@@ -104,7 +104,7 @@
 }
 
 #individual-text {
-    font-family: "Graphik-Regular";
+    font-family: "Univers-next";
     font-size: 18px;
     padding: 0px 400px;
     margin: 5px;
@@ -211,4 +211,52 @@ textarea {
 input {
     font-family: "Univers-next";
     margin: 10px;
+}
+
+/* ////ABOUT//// */
+.firstLineText {
+    display: flex;
+    font-family: "Univers-next";
+    color:rgba(178, 238, 119, 0.931);
+    font-size: 48px;
+    margin-top: 22vh;
+    margin-left: 5vw;
+}
+
+.secondLineText {
+    display: flex;
+    font-family: "Graphik-Regular";
+    margin-left: 12vw;
+    font-size: 38px;
+}
+
+.italicText {
+    display: flex;
+    font-size: 64px;
+    color: #7C9082;
+    margin-left: 40vw;
+}
+
+.fourthLineText {
+    display: flex;
+    font-family: "Univers-next";
+    font-size: 28px;
+    color: #433E0E;
+    margin-left: 54vw;
+}
+
+.aboutPageText {
+    animation: transitionIn 1.25s;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
 }
