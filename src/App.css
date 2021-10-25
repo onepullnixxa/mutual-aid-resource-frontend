@@ -245,6 +245,15 @@ input {
     margin-left: 54vw;
 }
 
+.tributeText {
+    display: flex;
+    font-size: 14px;
+    margin-top: 40vh;
+    margin-left: 5vw;
+    animation: transitionIn 3s;
+
+}
+
 .aboutPageText {
     animation: transitionIn 1.25s;
 }
