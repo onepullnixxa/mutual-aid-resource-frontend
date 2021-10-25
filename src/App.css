@@ -11,6 +11,16 @@
     src: url(./fonts/univers-next-pro-light.woff);
 }
 
+@font-face {
+    font-family: "Graphik-Regular";
+    src: url(./fonts/Graphik-Regular.woff);
+}
+
+@font-face {
+    font-family: "Moderat-Regular";
+    src: url(./fonts/Moderat-Regular.woff);
+}
+
 /* /////HEADER////// */
 
 .nav li {
@@ -94,7 +104,7 @@
 }
 
 #individual-text {
-    font-family: "Univers-next";
+    font-family: "Graphik-Regular";
     font-size: 18px;
     padding: 0px 400px;
     margin: 5px;
@@ -138,3 +148,67 @@
     padding-bottom: 30px;
 }
 
+/* //// ADD //// */
+.addForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30vh;
+    margin-left: 34vw;
+    width: 30%;
+    height: 400px;
+    padding: 215px;
+    border: 1.75px solid #ccc;
+    background: #fafafa;
+    color: #000;
+    box-sizing: border-box;
+    border-radius: 2px;
+    position: absolute;
+}
+
+.formTitle {
+    display: flex;
+    font-family: "Univers-next";
+    text-align: left;
+    margin-bottom: 28vh;
+    margin-right: 25px;
+}
+
+.individualName {
+    width: 250px;
+    height: 25px;
+    border-width: thin;
+}
+
+.individualImg {
+    width: 250px;
+    height: 25px;
+    border-width: thin;
+}
+
+.donationLink {
+    width: 250px;
+    height: 25px;
+    border-width: thin;
+}
+
+.submitButton {
+    margin-left: 9.5vw;
+}
+
+textarea {
+    font-family: "Univers-next";
+    font-size: 14px;
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 175px;
+    max-height: 175px;
+    border-width: thin;
+    margin: 5px;
+}
+
+input {
+    font-family: "Univers-next";
+    margin: 10px;
+}

@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 
 function Index(props) {
-
   const loaded = () => {
-    return (props.person.map((individual) => (
+    return props.person.map((individual) => (
       <div key={individual._id} className="individual">
         <Link to={`/home/${individual._id}`}>
           <img
@@ -18,22 +17,25 @@ function Index(props) {
           <p id="individual-text">{individual.contentText}</p>
         </div>
       </div>
-    )));
+    ));
   };
 
-function shuffle(array) {
-  let currentIndex = array.length, randomIndex;
-  
-  while (currentIndex !== 0) {
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
+  function shuffle(array) {
+    let currentIndex = array.length,
+      randomIndex;
 
-    [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex], array[currentIndex]];
+    while (currentIndex !== 0) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex],
+        array[currentIndex],
+      ];
+    }
+
+    return array;
   }
-
-  return array;
-}
 
   const loading = () => {
     return <h1>Just a moment...</h1>;

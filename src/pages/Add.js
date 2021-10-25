@@ -29,12 +29,18 @@ function Add(props) {
   };
 
   return (
-    <section>
+    <div className="container">      
+
+    <section className="addForm">
+      <div className="formTitle">
+        <h4>Please enter information below</h4>
+      </div>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           value={newForm.name}
           name="name"
+          className="individualName"
           placeholder="Individual's Name"
           onChange={handleChange}
         />
@@ -42,6 +48,7 @@ function Add(props) {
           type="text"
           value={newForm.img}
           name="img"
+          className="individualImg"
           placeholder="Image URL"
           onChange={handleChange}
         />
@@ -49,6 +56,7 @@ function Add(props) {
           type="text"
           value={newForm.donateLink}
           name="donateLink"
+          className="donationLink"
           placeholder="Link to Donate"
           onChange={handleChange}
         />
@@ -56,12 +64,14 @@ function Add(props) {
           type="text"
           value={newForm.contentText}
           name="contentText"
-          placeholder="Please enter text here..."
+          className="paragraphTextBox"
+          placeholder="Enter short description here..."
           onChange={handleChange}
         />
-        <input type="submit" value="Submit Post" />
+        <input className="submitButton" type="submit" value="Submit Post" />
       </form>
     </section>
+  </div>
   );
 }
 
