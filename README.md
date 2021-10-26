@@ -25,5 +25,10 @@ Description: Example of the schema used in this project.
 ## Getting Started
 [Click here](https://pensive-knuth-7d02c1.netlify.app/) to deploy the application.
 
+## Future Enchancements
+- Ability to sign in and be permitted to edit and delete posts.
+- Style the page to be responsive and mobile friendly.
+- Style the navbar to have a dropdown menu.
+- Include some on-scroll animations to the Index page.
 
 
