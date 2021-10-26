@@ -78,7 +78,7 @@
 .individual {
     text-align: center;
     margin-top: 85vh;
-    height: 80vh;   
+    height: 80vh; 
 }
 
 .individual-text {
@@ -120,7 +120,7 @@
     display: flex;
     align-items: center;
     flex-basis: 100%;
-    animation: transitionIn 1500ms;
+    animation: transitionIn 1500ms ease;
 }
 
 
@@ -144,10 +144,15 @@
 }
 
 .show-link {
-    margin-bottom: 20px;
-    color: #868686;
+    margin-bottom: 40px;
+    color: #afafaf;
     font-size: 24px;
     text-decoration: none;
+}
+
+.show-link:hover {
+    color: #818181;
+    transition: .4s ease;
 }
 
 a:visited {
@@ -175,6 +180,10 @@ a:visited {
 
 
 /* //// ADD //// */
+.container {
+    animation: transitionIn 1500ms ease;
+}
+
 .addForm {
     display: flex;
     align-items: center;
