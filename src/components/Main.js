@@ -8,7 +8,7 @@ import About from "../pages/About";
 function Main(props) {
   const [person, setPerson] = useState(null);
 
-  const URL = "https://mutual-aid-resource.herokuapp.com/home";
+  const URL = "https://mutual-aid-resource.herokuapp.com/home/";
 
   const getPersons = async () => {
     const response = await fetch(URL);
@@ -29,6 +29,28 @@ function Main(props) {
     getPersons();
   };
 
+  const updatePersons = async (person, id) => {
+    // make put request to create people
+    await fetch(URL + id, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "Application/json",
+      },
+      body: JSON.stringify(person),
+    });
+    //update list of people
+    getPersons();
+  };
+
+  const deletePersons = async (id) => {
+    // make delete request to create people
+    await fetch(URL + id, {
+      method: "DELETE",
+    });
+    // update list of people
+    getPersons();
+  };
+
   useEffect(() => getPersons(), []);
 
   return (
@@ -39,7 +61,9 @@ function Main(props) {
         </Route>
         <Route
           path="/home/:id"
-          render={(rp) => <Show person={person} {...rp} />}
+          render={(rp) => (
+            <Show person={person} updatePersons={updatePersons} deletePersons={deletePersons} {...rp} />
+          )}
         />
         <Route path="/add">
           <Add person={person} createPersons={createPersons} />

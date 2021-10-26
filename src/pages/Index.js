@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 function Index(props) {
+  
   const loaded = () => {
     return props.person.map((individual) => (
       <div key={individual._id} className="individual">
@@ -13,7 +14,7 @@ function Index(props) {
         </Link>
         <div className="individual-text">
           <h3 id="individual-name">{individual.name}</h3>
-          <h3 id="individual-link">{individual.donateLink}</h3>
+          <a href={individual.donateLink} id="individual-link">{individual.donateLink}</a>
           <p id="individual-text">{individual.contentText}</p>
         </div>
       </div>

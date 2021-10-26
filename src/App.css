@@ -78,7 +78,7 @@
 .individual {
     text-align: center;
     margin-top: 85vh;
-    height: 100vh;   
+    height: 80vh;   
 }
 
 .individual-text {
@@ -96,6 +96,7 @@
     color: #868686;
     font-size: 24px;
     padding: 10px;
+    text-decoration: none;
 }
 
 #individual-link:hover {
@@ -115,38 +116,63 @@
 
 
 /* /////SHOW////// */
-.person-show {
+.show-container {
     display: flex;
-    margin-top: 25vh;
+    align-items: center;
+    flex-basis: 100%;
+    animation: transitionIn 1500ms;
 }
 
-.person-show > * {
-    flex-basis: 100%;
-}
 
 .show-left {
+    display: flex;
+    margin-top: 5vh;
     margin-left: 15vw;
+
 }
 
 .show-right {
-    margin-right: 10vw;
     font-family: "Univers-next";
-}
-
-.show-icon {
-    border-radius: 250px;
-    width: 475px;
-    object-fit: contain;
+    text-align: left;
+    margin-top: 15vh;
+    padding: 125px;
 }
 
 .show-name {
-    margin-top: 25px;
-    padding-bottom: 30px;
+    margin-bottom: 20px;
+    color: #868686;
 }
 
 .show-link {
-    padding-bottom: 30px;
+    margin-bottom: 20px;
+    color: #868686;
+    font-size: 24px;
+    text-decoration: none;
 }
+
+a:visited {
+    text-decoration: none;
+}
+
+.show-text {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.deleteButton {
+    font-family: "Univers-next";
+    margin-top: 85vh;
+    margin-right: 3vw;
+    width: 200px;
+}
+
+.show-icon {
+    border-radius: 315px;
+    width: 575px;
+    object-fit: contain;
+}
+
+
 
 /* //// ADD //// */
 .addForm {
