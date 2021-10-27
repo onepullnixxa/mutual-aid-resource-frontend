@@ -77,6 +77,18 @@
     animation: transitionIn 1500ms ease-in;
 }
 
+.lineOne {
+    margin-left: 3vw;
+}
+
+.lineTwo {
+    margin-left: 10vw;
+}
+
+.lineThree {
+    margin-left: 18vw;
+}
+
 .person-icon {
     border-radius: 315px;
     width: 575px;
