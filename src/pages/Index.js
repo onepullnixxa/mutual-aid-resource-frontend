@@ -1,25 +1,5 @@
 import { Link } from "react-router-dom";
 
-function Index(props) {
-  
-  const loaded = () => {
-    return props.person.map((individual) => (
-      <div key={individual._id} className="individual">
-        <Link to={`/home/${individual._id}`}>
-          <img
-            src={individual.img}
-            alt={individual.name}
-            className="person-icon"
-          />
-        </Link>
-        <div className="individual-text">
-          <h3 id="individual-name">{individual.name}</h3>
-          <a href={individual.donateLink} id="individual-link">{individual.donateLink}</a>
-          <p id="individual-text">{individual.contentText}</p>
-        </div>
-      </div>
-    ));
-  };
 
   function shuffle(array) {
     let currentIndex = array.length,
@@ -37,12 +17,39 @@ function Index(props) {
 
     return array;
   }
+  function Index(props) {
 
-  const loading = () => {
-    return <h1>Just a moment...</h1>;
-  };
+  const shuffledPeople = props.person ? shuffle(props.person) : [];
 
-  return props.person ? shuffle(loaded()) : loading();
+  return (
+    <div>
+      <div className="titleText">
+        <h1 className="lineOne">Mutual</h1>
+        <h1 className="lineTwo">Aid</h1>
+        <h1 className="lineThree">Resource</h1>
+      </div>
+      {!shuffledPeople && <h1>Just a moment...</h1>}
+      {shuffledPeople &&
+        shuffledPeople.map((individual) => (
+          <div key={individual._id} className="individual">
+            <Link to={`/home/${individual._id}`}>
+              <img
+                src={individual.img}
+                alt={individual.name}
+                className="person-icon"
+              />
+            </Link>
+            <div className="individual-text">
+              <h3 id="individual-name">{individual.name}</h3>
+              <a href={individual.donateLink} id="individual-link">
+                {individual.donateLink}
+              </a>
+              <p id="individual-text">{individual.contentText}</p>
+            </div>
+          </div>
+        ))}
+    </div>
+  );
 }
 
 export default Index;

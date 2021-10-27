@@ -70,6 +70,13 @@
 }
 
 /* /////INDEX////// */
+.titleText {
+    font-family: "Univers-next";
+    font-size: 96px;
+    color:rgba(178, 238, 119, 0.931);
+    animation: transitionIn 1500ms ease-in;
+}
+
 .person-icon {
     border-radius: 315px;
     width: 575px;
